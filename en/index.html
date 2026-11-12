@@ -62,6 +62,8 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 .lang-sw{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;box-sizing:border-box;padding:0 12px;border:1px solid #3A3A3F;border-radius:999px;color:#FFFFFF !important;font-size:13px;font-weight:700;letter-spacing:1px}
 .lang-sw:hover{border-color:#FF8A3D;color:#FF8A3D !important}
 .rv-btn:hover{background:#FF8A3D !important;border-color:#FF8A3D !important;color:#0B0B0C !important}
+h1,h2,h3,p,blockquote{overflow-wrap:break-word;hyphens:auto}
+@media (max-width: 560px){.cert-logo{width:104px !important;flex-basis:104px !important;height:60px !important}.about-lead{font-size:22px !important}.brand-sub{display:none !important}.cta-long{display:none}.cta-short{display:inline !important}.hdr-cta{padding:10px 16px !important;font-size:14px !important}.brand-name{font-size:15px !important;line-height:1.15}.brand-txt{min-width:0}.brand-logo{width:38px !important;height:38px !important}.hdr-row{gap:12px !important;padding:12px 16px !important}.hdr-right{gap:8px !important}}
 @media (max-width: 900px){.navlinks{display:none !important}.hero-h1{font-size:44px !important}.sec-h2{font-size:34px !important}}
 </style>
 <style>html{scroll-behavior:smooth}section,footer{scroll-margin-top:80px}img{max-width:100%}</style>
@@ -71,12 +73,12 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 
 <!-- NAV -->
 <header style="position: sticky; top: 0; z-index: 10; background: rgba(11,11,12,0.92); border-bottom: 1px solid #1F1F22; backdrop-filter: blur(10px)">
-<div style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
-<a href="#top" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF">
-<img src="../assets/img/sp-logo.png" alt="SP — Stefanos Papadakis" style="width: 44px; height: 44px; display: block">
-<span style="display: flex; flex-direction: column; line-height: 1.15">
-<span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.2px">Stefanos Papadakis</span>
-<span style="font-size: 12px; color: #9A9AA0">Insurance &amp; Financial Advice</span>
+<div class="hdr-row" style="max-width: 1240px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; color: #FFFFFF; min-width: 0">
+<img src="../assets/img/sp-logo.png" class="brand-logo" alt="SP — Stefanos Papadakis" style="width: 44px; height: 44px; display: block">
+<span class="brand-txt" style="display: flex; flex-direction: column; line-height: 1.15">
+<span class="brand-name" style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 16px; letter-spacing: 0.2px">Stefanos Papadakis</span>
+<span class="brand-sub" style="font-size: 12px; color: #9A9AA0">Insurance &amp; Financial Advice</span>
 </span>
 </a>
 <nav class="navlinks" style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500">
@@ -87,9 +89,9 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 <a class="navlink" href="#funds" style="color: #B4B4BA">Mutual Funds</a>
 <a class="navlink" href="#contact" style="color: #B4B4BA">Contact</a>
 </nav>
-<div style="display: flex; align-items: center; gap: 10px">
+<div class="hdr-right" style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto">
 <a class="lang-sw" href="../" hreflang="el" lang="el" aria-label="Ελληνική έκδοση">ΕΛ</a>
-<a class="btn-o" href="#booking" style="background: #FF8A3D; color: #0B0B0C; font-weight: 600; font-size: 14px; padding: 12px 20px; border-radius: 999px; white-space: nowrap; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center">Book a meeting</a>
+<a class="btn-o hdr-cta" href="#booking" style="background: #FF8A3D; color: #0B0B0C; font-weight: 600; font-size: 14px; padding: 12px 20px; border-radius: 999px; white-space: nowrap; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center"><span class="cta-long">Book a meeting</span><span class="cta-short" style="display: none">Book</span></a>
 </div>
 </div>
 </header>
@@ -141,7 +143,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 
 <!-- CREDENTIALS STRIP -->
 <div style="border-top: 1px solid #1F1F22; border-bottom: 1px solid #1F1F22">
-<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))">
+<div style="max-width: 1240px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr))">
 <div style="padding: 28px 24px 28px 0; display: flex; flex-direction: column; gap: 6px">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 36px; color: #FF8A3D">15+</span>
 <span style="font-size: 14px; color: #9A9AA0">years in insurance and financial services</span>
@@ -172,7 +174,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 </div>
 <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #55555A">Every recommendation starts from your own goals and the risks you actually face — not from an off-the-shelf product.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 24px">
 <div style="background: #F3F3F1; border-radius: 20px; padding: 36px; display: flex; flex-direction: column; gap: 16px">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 15px; color: #0B0B0C; background: #FF8A3D; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center">01</span>
 <h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 24px">Needs analysis</h3>
@@ -202,7 +204,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 </div>
 <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #55555A">Identifying and analysing insurable risks is now essential for smooth operations and a stable future.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 20px">
 
 <article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
 <div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-keyperson.jpg" alt="Business executive" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
@@ -299,7 +301,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 </div>
 <p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #B4B4BA">Solutions that give your family a solid foundation — today, in retirement and for your children’s education.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
 
 <article class="svc" style="background: #141416; border: 1px solid #26262A; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
 <div style="aspect-ratio: 4 / 3; overflow: hidden; background: #1A1A1D"><img loading="lazy" src="../assets/img/service-family.jpg" alt="Parents with three children in a flowering meadow" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; display: block"></div>
@@ -350,7 +352,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 <a class="btn-g" href="#booking" style="border: 1px solid #0B0B0C; color: #0B0B0C; font-weight: 500; font-size: 16px; padding: 16px 28px; border-radius: 999px; display: inline-flex; align-items: center">Talk it through with me</a>
 </div>
 </div>
-<div style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px">
+<div style="flex: 1 1 460px; min-width: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 14px">
 <div style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 16px; padding: 20px; display: flex; gap: 14px; align-items: flex-start">
 <span style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: #0B0B0C; color: #FF8A3D; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"></rect><rect x="14" y="3" width="7" height="7" rx="1.5"></rect><rect x="3" y="14" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="7" rx="1.5"></rect></svg></span>
 <span style="display: flex; flex-direction: column; gap: 4px"><span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px">9 internal mixed funds</span><span style="font-size: 14px; line-height: 1.5; color: #55555A">All the funds of Accelerator Plus &amp; Single Flex by NN Hellas in one place.</span></span>
@@ -375,8 +377,8 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 <section id="about" style="background: #FFFFFF; color: #0B0B0C">
 <div style="max-width: 1240px; margin: 0 auto; padding: 112px 24px; display: flex; flex-wrap: wrap; gap: 64px; align-items: flex-start">
 <div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
-<div style="position: relative; width: 100%; max-width: 400px; margin-bottom: 20px">
-<div style="position: absolute; left: 18px; top: 18px; right: -18px; bottom: -18px; border: 2px solid #FF8A3D; border-radius: 22px"></div>
+<div style="position: relative; width: 100%; max-width: 418px; margin-bottom: 20px; padding: 0 18px 18px 0; box-sizing: border-box">
+<div style="position: absolute; left: 18px; top: 18px; right: 0; bottom: 0; border: 2px solid #FF8A3D; border-radius: 22px"></div>
 <img src="../assets/img/stefanos-papadakis.jpg" alt="Stefanos Papadakis" style="position: relative; width: 100%; aspect-ratio: 892 / 944; object-fit: cover; border-radius: 22px; display: block; background: #1A1A1D">
 </div>
 <span style="font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: #B85A12">About me</span>
@@ -396,38 +398,38 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 40px">
 <div style="display: flex; gap: 20px; align-items: stretch">
 <span style="width: 4px; flex: 0 0 4px; background: #FF8A3D; border-radius: 2px; display: block"></span>
-<p style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.3; color: #0B0B0C">Insurance and financial services for individuals and businesses, guided by the methodology of <span style="color: #B85A12">Financial Planning</span>.</p>
+<p class="about-lead" style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 30px; line-height: 1.3; color: #0B0B0C">Insurance and financial services for individuals and businesses, guided by the methodology of <span style="color: #B85A12">Financial Planning</span>.</p>
 </div>
 <p style="margin: 0; font-size: 17px; line-height: 1.7; color: #55555A">With more than 15 years in the field, I have worked with the largest insurance companies in Greece, designed wealth management strategies and advanced programmes for businesses. My work starts with a genuine understanding of each client’s needs and leads to long-term solutions for stability and growth.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 40px">
 <div style="display: flex; flex-direction: column">
 <div style="display: flex; align-items: center; gap: 12px; padding-bottom: 8px; border-bottom: 2px solid #0B0B0C">
 <span style="color: #FF8A3D; display: flex"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"></circle><path d="M15.5 13.5L17 22l-5-3-5 3 1.5-8.5"></path></svg></span>
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 1.4px; text-transform: uppercase">Professional certifications</span>
 </div>
 <div style="display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid #E2E2DF">
-<div style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-bog.png" alt="Bank of Greece" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
+<div class="cert-logo" style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-bog.png" alt="Bank of Greece" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
 <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px; line-height: 1.3">Level A Certificate in Insurance Intermediation</span>
 <span style="font-size: 14px; color: #55555A">Bank of Greece</span>
 </div>
 </div>
 <div style="display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid #E2E2DF">
-<div style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-bog.png" alt="Bank of Greece" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
+<div class="cert-logo" style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-bog.png" alt="Bank of Greece" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
 <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px; line-height: 1.3">Level D Certificate in Insurance Intermediation</span>
 <span style="font-size: 14px; color: #55555A">Bank of Greece</span>
 </div>
 </div>
 <div style="display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid #E2E2DF">
-<div style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 10px"><img loading="lazy" src="../assets/img/logo-aedak.png" alt="Α.Ε.Δ.Α.Κ." style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
+<div class="cert-logo" style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 10px"><img loading="lazy" src="../assets/img/logo-aedak.png" alt="Α.Ε.Δ.Α.Κ." style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
 <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px; line-height: 1.3">Mutual Funds — Theory &amp; Sales Techniques</span>
 <span style="font-size: 14px; color: #55555A">Ε.F.Φ. Α.Ε.Δ.Α.Κ.</span>
 </div>
 </div>
 <div style="display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid #E2E2DF">
-<div style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 12px"><img loading="lazy" src="../assets/img/logo-achmea.png" alt="Achmea Academy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
+<div class="cert-logo" style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 12px"><img loading="lazy" src="../assets/img/logo-achmea.png" alt="Achmea Academy" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
 <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px; line-height: 1.3">Financial Planning</span>
 <span style="font-size: 14px; color: #55555A">Achmea Academy</span>
@@ -440,21 +442,21 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 15px; letter-spacing: 1.4px; text-transform: uppercase">Education</span>
 </div>
 <div style="display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid #E2E2DF">
-<div style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 10px"><img loading="lazy" src="../assets/img/logo-plymouth.png" alt="University of Plymouth" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
+<div class="cert-logo" style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 10px"><img loading="lazy" src="../assets/img/logo-plymouth.png" alt="University of Plymouth" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
 <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px; line-height: 1.3">MSc E-Commerce</span>
 <span style="font-size: 14px; color: #55555A">University of Plymouth</span>
 </div>
 </div>
 <div style="display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid #E2E2DF">
-<div style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-essex.png" alt="University of Essex" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
+<div class="cert-logo" style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-essex.png" alt="University of Essex" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
 <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px; line-height: 1.3">BSc Information Management Systems</span>
 <span style="font-size: 14px; color: #55555A">University of Essex</span>
 </div>
 </div>
 <div style="display: flex; align-items: center; gap: 18px; padding: 16px 0; border-bottom: 1px solid #E2E2DF">
-<div style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-british.png" alt="British Council" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
+<div class="cert-logo" style="width: 150px; height: 72px; flex: 0 0 150px; border-radius: 16px; background: #FFFFFF; border: 1px solid #E2E2DF; display: flex; align-items: center; justify-content: center; overflow: hidden; box-sizing: border-box; padding: 6px"><img loading="lazy" src="../assets/img/logo-british.png" alt="British Council" style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; flex: 0 1 auto; min-width: 0; display: block"></div>
 <div style="display: flex; flex-direction: column; gap: 3px; min-width: 0">
 <span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px; line-height: 1.3">Mathematics &amp; Statistics</span>
 <span style="font-size: 14px; color: #55555A">British Council</span>
@@ -718,7 +720,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 
 <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px">
 <legend style="padding: 0; margin-bottom: 16px; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 20px"><span style="color: #B85A12">1.</span> Your details</legend>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
 <div style="display: flex; flex-direction: column; gap: 6px"><label for="bk-name" style="font-size: 13px; font-weight: 600; color: #2A2A2D">Full name *</label><input class="bk-in" id="bk-name" name="Ονοματεπώνυμο" type="text" placeholder="e.g. Maria Papadopoulou" autocomplete="name" required style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #D6D6D2; border-radius: 12px; font: inherit; font-size: 16px; color: #0B0B0C; background: #FFFFFF"></div>
 <div style="display: flex; flex-direction: column; gap: 6px"><label for="bk-phone" style="font-size: 13px; font-weight: 600; color: #2A2A2D">Phone *</label><input class="bk-in" id="bk-phone" name="Τηλέφωνο" type="tel" placeholder="69X XXX XXXX" autocomplete="tel" required style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #D6D6D2; border-radius: 12px; font: inherit; font-size: 16px; color: #0B0B0C; background: #FFFFFF"></div>
 </div>
@@ -742,7 +744,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 
 <fieldset style="border: 0; margin: 0; padding: 0">
 <legend style="padding: 0; margin-bottom: 16px; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 20px"><span style="color: #B85A12">3.</span> How would you like to meet? *</legend>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 12px">
 <label class="bk-opt"><input type="radio" name="Τύπος συνάντησης" value="At the office (Kissamou 107, Chania)" required checked><span class="bk-opt-box"><span class="bk-opt-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V7l7-4 7 4v14"></path><path d="M9 21v-6h6v6"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">At the office</span><span style="font-size: 14px; color: #55555A">Kissamou 107, Chania</span></span></span></label>
 <label class="bk-opt"><input type="radio" name="Τύπος συνάντησης" value="Online video call"><span class="bk-opt-box"><span class="bk-opt-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"></rect><path d="M16 10l6-3v10l-6-3"></path></svg></span><span style="display: flex; flex-direction: column; gap: 2px"><span style="font-weight: 700; font-size: 16px">Online</span><span style="font-size: 14px; color: #55555A">Video call from wherever you are</span></span></span></label>
 </div>
@@ -750,7 +752,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 
 <fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px">
 <legend style="padding: 0; margin-bottom: 16px; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 20px"><span style="color: #B85A12">4.</span> When suits you?</legend>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px">
 <div style="display: flex; flex-direction: column; gap: 6px"><label for="bk-date" style="font-size: 13px; font-weight: 600; color: #2A2A2D">Preferred day</label><input class="bk-in" id="bk-date" name="Preferred day" type="date" placeholder="" autocomplete="" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #D6D6D2; border-radius: 12px; font: inherit; font-size: 16px; color: #0B0B0C; background: #FFFFFF"></div>
 <div style="display: flex; flex-direction: column; gap: 6px"><label for="bk-time" style="font-size: 13px; font-weight: 600; color: #2A2A2D">Preferred time</label><select class="bk-in" id="bk-time" name="Preferred time" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #D6D6D2; border-radius: 12px; font: inherit; font-size: 16px; color: #0B0B0C; background: #FFFFFF"><option value="Any">Any time</option><option>Morning (09:00–12:00)</option><option>Midday (12:00–15:00)</option><option>Afternoon (17:00–20:00)</option></select></div>
 </div>
@@ -771,7 +773,7 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 <!-- FOOTER -->
 <footer id="contact" style="background: #0B0B0C; color: #FFFFFF">
 <div style="max-width: 1240px; margin: 0 auto; padding: 80px 24px 40px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 40px">
 <div style="display: flex; flex-direction: column; gap: 16px">
 <img src="../assets/img/sp-logo.png" alt="SP" style="width: 64px; height: 64px; display: block">
 <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #9A9AA0; max-width: 260px">Insurance and financial solutions for individuals and businesses.</p>
