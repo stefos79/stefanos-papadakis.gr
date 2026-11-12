@@ -62,9 +62,23 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 .lang-sw{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;box-sizing:border-box;padding:0 12px;border:1px solid #3A3A3F;border-radius:999px;color:#FFFFFF !important;font-size:13px;font-weight:700;letter-spacing:1px}
 .lang-sw:hover{border-color:#FF8A3D;color:#FF8A3D !important}
 .rv-btn:hover{background:#FF8A3D !important;border-color:#FF8A3D !important;color:#0B0B0C !important}
-h1,h2,h3,p,blockquote{overflow-wrap:break-word;hyphens:auto}
-@media (max-width: 560px){.cert-logo{width:104px !important;flex-basis:104px !important;height:60px !important}.about-lead{font-size:22px !important}.brand-sub{display:none !important}.cta-long{display:none}.cta-short{display:inline !important}.hdr-cta{padding:10px 16px !important;font-size:14px !important}.brand-name{font-size:15px !important;line-height:1.15}.brand-txt{min-width:0}.brand-logo{width:38px !important;height:38px !important}.hdr-row{gap:12px !important;padding:12px 16px !important}.hdr-right{gap:8px !important}}
-@media (max-width: 900px){.navlinks{display:none !important}.hero-h1{font-size:44px !important}.sec-h2{font-size:34px !important}}
+p,blockquote{overflow-wrap:break-word;hyphens:auto}
+h1,h2,h3{hyphens:manual;overflow-wrap:normal;word-break:normal}
+@media (max-width: 560px){.cert-logo{width:104px !important;flex-basis:104px !important;height:60px !important}.about-lead{font-size:22px !important}.brand-sub{font-size:11px !important}.cta-long{display:none}.cta-short{display:inline !important}.hdr-cta{padding:10px 16px !important;font-size:14px !important}.brand-name{font-size:15px !important;line-height:1.15}.brand-txt{min-width:0}.brand-logo{width:38px !important;height:38px !important}.hdr-row{gap:12px !important;padding:12px 16px !important}.hdr-right{gap:8px !important}}
+.mnav{display:none}
+.mnav summary{list-style:none;cursor:pointer;width:44px;height:44px;box-sizing:border-box;border:1px solid #3A3A3F;border-radius:999px;display:flex;align-items:center;justify-content:center;color:#FFFFFF;-webkit-tap-highlight-color:transparent}
+.mnav summary::-webkit-details-marker{display:none}
+.mnav .mnav-ic-close{display:none}
+.mnav[open] .mnav-ic-open{display:none}
+.mnav[open] .mnav-ic-close{display:block}
+.mnav[open] summary{border-color:#FF8A3D;color:#FF8A3D}
+.mnav-panel{position:absolute;left:0;right:0;top:100%;background:#0B0B0C;border-bottom:1px solid #1F1F22;box-shadow:0 24px 40px rgba(0,0,0,.45);padding:8px 24px 24px;display:flex;flex-direction:column}
+.mnav-panel a.mnav-link{display:flex;align-items:center;justify-content:space-between;min-height:52px;border-bottom:1px solid #1F1F22;color:#FFFFFF;font-size:17px;font-weight:500}
+.mnav-panel a.mnav-link:hover{color:#FF8A3D}
+.mnav-panel a.mnav-cta{margin-top:18px;background:#FF8A3D;color:#0B0B0C;font-weight:600;font-size:16px;min-height:52px;border-radius:999px;display:flex;align-items:center;justify-content:center}
+@media (max-width: 900px){.mnav{display:block}}
+@media (max-width: 480px){.hdr-cta{display:none !important}}
+@media (max-width: 900px){.navlinks{display:none !important}.hero-h1{font-size:clamp(34px, 10.5vw, 52px) !important;letter-spacing:-1px !important}.sec-h2{font-size:clamp(28px, 8.4vw, 36px) !important}}
 </style>
 <style>html{scroll-behavior:smooth}section,footer{scroll-margin-top:80px}img{max-width:100%}</style>
 </head>
@@ -92,6 +106,18 @@ h1,h2,h3,p,blockquote{overflow-wrap:break-word;hyphens:auto}
 <div class="hdr-right" style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto">
 <a class="lang-sw" href="../" hreflang="el" lang="el" aria-label="Ελληνική έκδοση">ΕΛ</a>
 <a class="btn-o hdr-cta" href="#booking" style="background: #FF8A3D; color: #0B0B0C; font-weight: 600; font-size: 14px; padding: 12px 20px; border-radius: 999px; white-space: nowrap; min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center"><span class="cta-long">Book a meeting</span><span class="cta-short" style="display: none">Book</span></a>
+<details class="mnav">
+<summary aria-label="Menu"><svg class="mnav-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg><svg class="mnav-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></summary>
+<div class="mnav-panel">
+<a class="mnav-link" href="#business">Business<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="#individuals">Individuals<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="#about">About<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="#reviews">Reviews<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="#funds">Mutual Funds<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="#contact">Contact<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-cta" href="#booking">Book a free meeting</a>
+</div>
+</details>
 </div>
 </div>
 </header>
@@ -812,6 +838,7 @@ function go(d){var c=t.firstElementChild;var step=c?c.getBoundingClientRect().wi
 if(d>0&&t.scrollLeft>=max)x=0;if(d<0&&t.scrollLeft<=4)x=t.scrollWidth;try{t.scrollTo({left:x,behavior:'smooth'})}catch(e){t.scrollLeft=x}}
 document.getElementById('rv-prev').addEventListener('click',function(){go(-1)});
 document.getElementById('rv-next').addEventListener('click',function(){go(1)});})();
+(function(){var m=document.querySelector('.mnav');if(!m)return;m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.removeAttribute('open')})});document.addEventListener('click',function(e){if(m.open&&!m.contains(e.target))m.removeAttribute('open')});document.addEventListener('keydown',function(e){if(e.key==='Escape')m.removeAttribute('open')});window.addEventListener('resize',function(){if(window.innerWidth>900)m.removeAttribute('open')});})();
 (function(){var f=document.getElementById('bk-form');if(!f)return;var st=document.getElementById('bk-status'),btn=document.getElementById('bk-send');
 var d=document.getElementById('bk-date');if(d){d.min=new Date().toISOString().slice(0,10)}
 f.addEventListener('submit',function(e){e.preventDefault();
