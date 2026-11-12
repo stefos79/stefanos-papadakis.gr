@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.stefanos-papadakis.gr/sitemap.xml
