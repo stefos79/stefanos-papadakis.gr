@@ -61,6 +61,12 @@ a{color:#FF8A3D;text-decoration:none}a:hover{color:#FFA866}
 .bio-more summary:hover{color:#0B0B0C}
 .lang-sw{display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;box-sizing:border-box;padding:0 12px;border:1px solid #3A3A3F;border-radius:999px;color:#FFFFFF !important;font-size:13px;font-weight:700;letter-spacing:1px}
 .lang-sw:hover{border-color:#FF8A3D;color:#FF8A3D !important}
+.nc-in:focus{outline:none;border-color:#FF8A3D !important;box-shadow:0 0 0 3px rgba(255,138,61,.35)}
+.nc-opt{position:relative;cursor:pointer;display:block}
+.nc-opt input{position:absolute;opacity:0;width:1px;height:1px}
+.nc-opt span{display:flex;align-items:center;justify-content:center;min-height:48px;padding:10px;border:1px solid #3A3A3F;border-radius:12px;font-size:15px;font-weight:600;color:#D6D6DA;text-align:center}
+.nc-opt input:checked+span{border-color:#FF8A3D;background:rgba(255,138,61,.12);color:#FFFFFF}
+.nc-opt input:focus-visible+span{box-shadow:0 0 0 3px rgba(255,138,61,.6)}
 .rv-btn:hover{background:#FF8A3D !important;border-color:#FF8A3D !important;color:#0B0B0C !important}
 *{hyphens:manual !important;-webkit-hyphens:manual !important}
 p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
@@ -101,6 +107,7 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="navlink" href="#about" style="color: #B4B4BA">About</a>
 <a class="navlink" href="#reviews" style="color: #B4B4BA">Reviews</a>
 <a class="navlink" href="#funds" style="color: #B4B4BA">Mutual Funds</a>
+<a class="navlink" href="#nncare" style="color: #FF8A3D; font-weight: 600; white-space: nowrap">24/7 Doctor</a>
 <a class="navlink" href="#contact" style="color: #B4B4BA">Contact</a>
 </nav>
 <div class="hdr-right" style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto">
@@ -114,6 +121,7 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="mnav-link" href="#about">About<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#reviews">Reviews<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#funds">Mutual Funds<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="#nncare">24/7 Doctor<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#contact">Contact<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-cta" href="#booking">Book a free meeting</a>
 </div>
@@ -362,6 +370,51 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 </article>
 
 </div>
+</div>
+</section>
+
+<!-- NNCARE -->
+<section id="nncare" style="background: #FFFFFF; color: #0B0B0C">
+<div style="max-width: 1240px; margin: 0 auto; padding: 112px 24px; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start">
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #FFF4EC; border: 1px solid #FFD2B3; color: #B85A12; font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; padding: 8px 14px; border-radius: 999px"><span style="width: 8px; height: 8px; border-radius: 50%; background: #FF8A3D; display: block"></span>A gift from me · 2 years at no cost</span>
+<h2 class="sec-h2" style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 46px; line-height: 1.08; letter-spacing: -1px">A doctor for <span style="color: #B85A12">your whole family</span>. Whenever you need one. Free.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #55555A">A fever at 3 a.m., a worrying rash, a question that can’t wait for an appointment: with one phone call I enrol you in a <strong style="color: #0B0B0C">24/7 telemedicine service</strong> — and you get it <strong style="color: #0B0B0C">for 2 years without paying a thing</strong>.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 10px"><span style="background: #0B0B0C; color: #FFFFFF; font-size: 15px; font-weight: 500; padding: 10px 16px; border-radius: 999px">“My child has a fever in the middle of the night”</span><span style="background: #0B0B0C; color: #FFFFFF; font-size: 15px; font-weight: 500; padding: 10px 16px; border-radius: 999px">“I’m travelling and don’t feel well”</span><span style="background: #0B0B0C; color: #FFFFFF; font-size: 15px; font-weight: 500; padding: 10px 16px; border-radius: 999px">“I don’t want to wait hours at a clinic”</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px 28px; padding-top: 8px">
+<div style="display: flex; gap: 14px; align-items: flex-start"><span style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: #0B0B0C; color: #FF8A3D; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 10l5-3v10l-5-3"></path><rect x="2" y="6" width="13" height="12" rx="2"></rect></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px">A doctor day and night</span><span style="font-size: 15px; line-height: 1.5; color: #55555A">Video call or chat with a GP, 24 hours a day, 7 days a week.</span></span></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><span style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: #0B0B0C; color: #FF8A3D; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"></circle><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"></path></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px">Paediatrician, dermatologist, dietitian</span><span style="font-size: 15px; line-height: 1.5; color: #55555A">Specialist appointments from your sofa — no travel needed.</span></span></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><span style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: #0B0B0C; color: #FF8A3D; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M9 12h6M9 16h6"></path></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px">Your whole history in one place</span><span style="font-size: 15px; line-height: 1.5; color: #55555A">A digital health record, always there when you need it.</span></span></div>
+<div style="display: flex; gap: 14px; align-items: flex-start"><span style="width: 44px; height: 44px; flex: 0 0 44px; border-radius: 12px; background: #0B0B0C; color: #FF8A3D; display: flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 13l3-1 4-8h4l1 5h4l2 4v4h-3"></path><circle cx="8" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle></svg></span><span style="display: flex; flex-direction: column; gap: 3px"><span style="font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 17px">Emergency transfer</span><span style="font-size: 15px; line-height: 1.5; color: #55555A">Road or air transfer escorted by a doctor, anywhere in Greece.</span></span></div>
+</div>
+<div style="background: #F3F3F1; border-radius: 18px; padding: 22px 24px; display: flex; flex-direction: column; gap: 14px; margin-top: 8px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: #6B6B70">No paperwork, no hassle</span>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 14px 26px"><li style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600"><span style="width: 30px; height: 30px; flex: 0 0 30px; border-radius: 50%; background: #FF8A3D; color: #0B0B0C; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">1</span>Leave your details</li><li style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600"><span style="width: 30px; height: 30px; flex: 0 0 30px; border-radius: 50%; background: #FF8A3D; color: #0B0B0C; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">2</span>I call you</li><li style="display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 600"><span style="width: 30px; height: 30px; flex: 0 0 30px; border-radius: 50%; background: #FF8A3D; color: #0B0B0C; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">3</span>We do it all together</li></ol>
+</div>
+</div>
+<form id="nc-form" action="https://formsubmit.co/papadakis.stefanos@gmail.com" method="POST" style="flex: 1 1 360px; min-width: 0; background: #0B0B0C; color: #FFFFFF; border-radius: 24px; padding: 32px; box-sizing: border-box; display: flex; flex-direction: column; gap: 18px; box-shadow: 0 30px 60px rgba(11,11,12,0.22)">
+<input type="hidden" name="_subject" value="Interest (EN): 24/7 doctor (2 years free) — stefanos-papadakis.gr">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="Αίτημα" value="Τηλεϊατρική 24/7 — 2 χρόνια δωρεάν">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0">
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 26px">I want my 2 free years</span><span style="font-size: 15px; color: #B4B4BA">Leave your details and I’ll call you to set everything up together. No obligation.</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nc-name" style="font-size: 13px; font-weight: 600; color: #D6D6DA">Full name *</label><input class="nc-in" id="nc-name" name="Ονοματεπώνυμο" type="text" placeholder="e.g. Maria Papadopoulou" autocomplete="name" required style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #3A3A3F; border-radius: 12px; font: inherit; font-size: 16px; color: #FFFFFF; background: #141416"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nc-phone" style="font-size: 13px; font-weight: 600; color: #D6D6DA">Phone *</label><input class="nc-in" id="nc-phone" name="Τηλέφωνο" type="tel" placeholder="69X XXX XXXX" autocomplete="tel" required style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #3A3A3F; border-radius: 12px; font: inherit; font-size: 16px; color: #FFFFFF; background: #141416"></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nc-email" style="font-size: 13px; font-weight: 600; color: #D6D6DA">Email</label><input class="nc-in" id="nc-email" name="email" type="email" placeholder="name@example.com" autocomplete="email" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #3A3A3F; border-radius: 12px; font: inherit; font-size: 16px; color: #FFFFFF; background: #141416"></div>
+<fieldset style="border: 0; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px"><legend style="padding: 0; margin-bottom: 8px; font-size: 13px; font-weight: 600; color: #D6D6DA">For whom? *</legend>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+<label class="nc-opt"><input type="radio" name="Για" value="Ατομικό" required checked><span>Just me</span></label>
+<label class="nc-opt"><input type="radio" name="Για" value="Οικογενειακό"><span>My family</span></label>
+</div></fieldset>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nc-mem" style="font-size: 13px; font-weight: 600; color: #D6D6DA">How many people?</label><select class="nc-in" id="nc-mem" name="Άτομα" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #3A3A3F; border-radius: 12px; font: inherit; font-size: 16px; color: #FFFFFF; background: #141416"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><label for="nc-when" style="font-size: 13px; font-weight: 600; color: #D6D6DA">When should I call?</label><select class="nc-in" id="nc-when" name="Ώρα κλήσης" style="width: 100%; box-sizing: border-box; min-height: 48px; padding: 12px 14px; border: 1px solid #3A3A3F; border-radius: 12px; font: inherit; font-size: 16px; color: #FFFFFF; background: #141416"><option>Any time</option><option>Morning (09:00–12:00)</option><option>Midday (12:00–15:00)</option><option>Afternoon (17:00–20:00)</option></select></div>
+</div>
+<label style="display: flex; gap: 12px; align-items: flex-start; font-size: 13px; line-height: 1.5; color: #B4B4BA; cursor: pointer"><input type="checkbox" name="Συγκατάθεση" value="Ναι" required style="width: 20px; height: 20px; flex: 0 0 20px; margin: 1px 0 0; accent-color: #FF8A3D"><span>I agree that my details will be used solely so that Stefanos Papadakis can contact me about this offer. *</span></label>
+<button type="submit" id="nc-send" class="btn-o" style="background: #FF8A3D; color: #0B0B0C; font: inherit; font-weight: 700; font-size: 16px; padding: 16px 24px; border: 0; border-radius: 999px; cursor: pointer; min-height: 52px">Yes, I want a free 24/7 doctor</button>
+<span id="nc-status" role="status" aria-live="polite" style="font-size: 14px; font-weight: 600; color: #D6D6DA"></span>
+</form>
 </div>
 </section>
 
@@ -849,6 +902,14 @@ fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',he
 .then(function(r){return r.json().then(function(j){if(!r.ok||j.success==='false'||j.success===false)throw new Error(j.message||'error');return j})})
 .then(function(){f.reset();st.style.color='#1F7A3A';st.textContent='Thank you! Your request has been sent. I will be in touch soon.'})
 .catch(function(){st.style.color='#B42318';st.textContent='Something went wrong. Please try again or call me on +30 697 35 20 823.'})
+.finally(function(){btn.disabled=false;btn.style.opacity='1'});});})();
+(function(){var f=document.getElementById('nc-form');if(!f)return;var st=document.getElementById('nc-status'),btn=document.getElementById('nc-send');
+f.addEventListener('submit',function(e){e.preventDefault();var data=new FormData(f);data.append('Γλώσσα σελίδας','EN');
+btn.disabled=true;btn.style.opacity='.6';st.style.color='#D6D6DA';st.textContent='Sending…';
+fetch(f.action.replace('formsubmit.co/','formsubmit.co/ajax/'),{method:'POST',headers:{'Accept':'application/json'},body:data})
+.then(function(r){return r.json().then(function(j){if(!r.ok||j.success==='false'||j.success===false)throw new Error('e');return j})})
+.then(function(){f.reset();st.style.color='#7BE0A0';st.textContent='Thank you! I will call you soon to complete the enrolment together.'})
+.catch(function(){st.style.color='#FF9C8A';st.textContent='Something went wrong. Please try again or call me on +30 697 35 20 823.'})
 .finally(function(){btn.disabled=false;btn.style.opacity='1'});});})();
 </script>
 </body>
