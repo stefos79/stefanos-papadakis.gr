@@ -410,18 +410,29 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 
 <!-- PENSION HOOK -->
 <section id="pension-hook" style="background: #F3F3F1; padding: clamp(48px, 7vw, 70px) clamp(16px, 3vw, 30px)">
-<div style="max-width: 1180px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E4E4E8; border-radius: 28px; padding: clamp(28px, 5vw, 48px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 30px 50px">
-<div style="flex: 1 1 480px; min-width: 0">
-<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #B85A12">Υπολογιστής σύνταξης · 1 λεπτό</div>
-<h2 style="margin: 14px 0 0; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.1; letter-spacing: -1px; color: #0B0B0C">Πόσα θα σου <span style="color: #E0701F">λείπουν</span> κάθε μήνα στη σύνταξη;</h2>
-<p style="margin: 14px 0 0; font-size: 17px; line-height: 1.6; color: #55555A; max-width: 600px">Η κρατική σύνταξη σπάνια φτάνει για το ίδιο επίπεδο ζωής. Δες το δικό σου κενό και πόσα να αποταμιεύεις από σήμερα για να το κλείσεις.</p>
-<a href="pension/" style="margin-top: 22px; display: inline-flex; align-items: center; gap: 10px; background: #0B0B0C; color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 17px; padding: 17px 30px; border-radius: 999px">Υπολόγισε το κενό σου <span aria-hidden="true" style="color: #FF8A3D">→</span></a>
+<div style="max-width: 1180px; margin: 0 auto; background: #0B0B0C; color: #FFFFFF; border-radius: 28px; padding: clamp(28px, 5vw, 52px); position: relative; overflow: hidden; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 30px 50px">
+<div style="position: absolute; width: 600px; height: 600px; border-radius: 50%; right: -160px; top: -220px; background: radial-gradient(circle, rgba(255,138,61,0.25), rgba(255,138,61,0) 62%); pointer-events: none"></div>
+<div style="flex: 1 1 480px; min-width: 0; position: relative">
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FF8A3D">Υπολογιστής σύνταξης · 1 λεπτό</div>
+<h2 style="margin: 14px 0 0; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: clamp(26px, 3.6vw, 40px); line-height: 1.1; letter-spacing: -1px; color: #FFFFFF">Πόσα θα σου <span style="color: #FF8A3D">λείπουν</span> κάθε μήνα στη σύνταξη;</h2>
+<p style="margin: 14px 0 0; font-size: 17px; line-height: 1.6; color: #B4B4BA; max-width: 600px">Η κρατική σύνταξη σπάνια φτάνει για το ίδιο επίπεδο ζωής. Δες το δικό σου κενό και πόσα να αποταμιεύεις από σήμερα για να το κλείσεις.</p>
+<a href="pension/" style="margin-top: 22px; display: inline-flex; align-items: center; gap: 10px; background: #FF8A3D; color: #0B0B0C; text-decoration: none; font-weight: 800; font-size: 17px; padding: 17px 30px; border-radius: 999px; box-shadow: 0 14px 36px rgba(255,138,61,0.35)">Υπολόγισε το κενό σου <span aria-hidden="true">→</span></a>
 </div>
-<div style="flex: 0 1 300px; min-width: 0; margin: 0 auto; background: #0B0B0C; color: #FFFFFF; border-radius: 22px; padding: 24px 26px">
-<div style="font-size: 13px; color: #8A8A90">Παράδειγμα: 35 ετών, €1.500/μήνα</div>
-<div style="margin-top: 8px; font-family: 'Commissioner', sans-serif; font-weight: 900; font-size: 50px; letter-spacing: -2px; color: #FF8A3D; line-height: 1">−€450<span style="font-size: 18px; color: #B4B4BA; letter-spacing: 0">/μήνα</span></div>
-<div style="margin-top: 14px; height: 12px; border-radius: 99px; background: #26262B; overflow: hidden; display: flex"><i style="display: block; width: 62%; background: #5A5A62"></i><i style="display: block; width: 38%; background: #FF8A3D"></i></div>
-<div style="margin-top: 8px; font-size: 13px; color: #B4B4BA">κενό</div>
+<div style="flex: 0 1 300px; min-width: 0; margin: 0 auto; position: relative; background: #16161A; border: 1px solid #26262B; color: #FFFFFF; border-radius: 22px; padding: 24px 26px">
+<div id="pnh-ex" style="font-size: 13px; color: #8A8A90; transition: opacity .3s">Παράδειγμα: 35 ετών, €1.500/μήνα</div>
+<div style="margin-top: 8px; font-family: 'Commissioner', sans-serif; font-weight: 900; font-size: 50px; letter-spacing: -2px; color: #FF8A3D; line-height: 1; white-space: nowrap">−<span id="pnh-num">€450</span><span style="font-size: 18px; color: #B4B4BA; letter-spacing: 0">/μήνα</span></div>
+<div style="margin-top: 14px; height: 12px; border-radius: 99px; background: #26262B; overflow: hidden; display: flex"><i id="pnh-a" style="display: block; width: 62.5%; background: #5A5A62; transition: width 1.2s cubic-bezier(.65,0,.35,1)"></i><i style="display: block; flex: 1; background: #FF8A3D"></i></div>
+<div style="margin-top: 8px; display: flex; justify-content: space-between; font-size: 13px; color: #B4B4BA"><span>κρατική σύνταξη</span><span style="color: #FF8A3D">κενό</span></div>
+<script>(function(){var L="el-GR",EX="Παράδειγμα: %a ετών, %i/μήνα",P=[[35,1500,80],[28,1200,70],[45,2200,90],[52,1800,75],[40,3000,85]],k=0,cur=450;
+var ex=document.getElementById("pnh-ex"),num=document.getElementById("pnh-num"),bar=document.getElementById("pnh-a");if(!num)return;
+function f(v){return "€"+Math.round(v).toLocaleString(L)}
+if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+var vis=true;if("IntersectionObserver" in window){new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(num)}
+setInterval(function(){if(!vis||document.hidden)return;k=(k+1)%P.length;var p=P[k],need=p[1]*p[2]/100,st=p[1]*.5,gap=need-st,from=cur,t0=null;
+ex.style.opacity=0;setTimeout(function(){ex.textContent=EX.replace("%a",p[0]).replace("%i",f(p[1]));ex.style.opacity=1},300);
+bar.style.width=(st/need*100).toFixed(1)+"%";
+requestAnimationFrame(function g(t){if(!t0)t0=t;var q=Math.min(1,(t-t0)/1200),e=q<.5?4*q*q*q:1-Math.pow(-2*q+2,3)/2;cur=from+(gap-from)*e;num.textContent=f(cur);if(q<1)requestAnimationFrame(g)})
+},3000)})();</script>
 </div>
 </div>
 </section>
