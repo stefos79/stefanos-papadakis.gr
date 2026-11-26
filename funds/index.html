@@ -249,6 +249,20 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 @media (max-width:820px){.mf-subnav-t{display:none}.mf-subnav-in{padding:0 18px}}
 
 </style>
+<style>
+.navdd{position:relative;display:inline-flex;align-items:center}
+.navdd > a.navlink{display:inline-flex;align-items:center;gap:5px}
+.navdd-caret{transition:transform .2s}
+.navdd:hover .navdd-caret,.navdd:focus-within .navdd-caret{transform:rotate(180deg)}
+.navdd-panel{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);min-width:220px;padding:10px;background:#16161A;border:1px solid #26262B;border-radius:14px;box-shadow:0 24px 40px rgba(0,0,0,.45);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .15s,transform .15s;z-index:20}
+.navdd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+.navdd:hover .navdd-panel,.navdd:focus-within .navdd-panel{opacity:1;visibility:visible;transform:translate(-50%,14px)}
+.navdd-panel a{color:#D6D6DA;text-decoration:none;font-size:14px;font-weight:500;padding:10px 12px;border-radius:8px;white-space:nowrap}
+.navdd-panel a:hover{background:#232328;color:#FF8A3D}
+.navdd-panel a.navdd-all{color:#FF8A3D;font-weight:600;border-bottom:1px solid #26262B;border-radius:8px 8px 0 0;margin-bottom:4px}
+.mnav-panel a.mnav-sub{min-height:40px;padding-left:16px;font-size:15px;color:#B4B4BA;border-bottom:1px solid #18181B;display:flex;align-items:center}
+.mnav-panel a.mnav-sub:hover{color:#FF8A3D}
+</style>
 </head>
 <body>
 <div style="width: 100%; font-family: 'Inter', system-ui, sans-serif; color: #FFFFFF; background: #0B0B0C">
@@ -268,7 +282,7 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="navlink" href="../#individuals" style="color: #B4B4BA">Ιδιώτες</a>
 <a class="navlink" href="../#about" style="color: #B4B4BA">Σχετικά</a>
 <a class="navlink" href="../#reviews" style="color: #B4B4BA">Κριτικές</a>
-<a class="navlink" href="./" style="color: #B4B4BA">Αμοιβαία Κεφάλαια</a>
+<div class="navdd"><a class="navlink" href="./" style="color: #B4B4BA" aria-haspopup="true">Αμοιβαία Κεφάλαια<svg class="navdd-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="navdd-panel" role="menu"><a class="navdd-all" href="./">Αμοιβαία Κεφάλαια · Όλη η σελίδα</a><a href="./#overview">Επισκόπηση</a><a href="./#performance">Αποδόσεις</a><a href="./#strategies">Στρατηγικές</a><a href="./#portfolio">Χαρτοφυλάκιο</a><a href="./#funds">Κεφάλαια</a></div></div>
 <a class="navlink" href="../care/" style="color: #FF8A3D; font-weight: 600; white-space: nowrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg>Care 24/7</a>
 <a class="navlink" href="../#contact" style="color: #B4B4BA">Επικοινωνία</a>
 </nav>
@@ -283,6 +297,11 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="mnav-link" href="../#about">Σχετικά<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="../#reviews">Κριτικές<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="./">Αμοιβαία Κεφάλαια<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-sub" href="./#overview">Επισκόπηση</a>
+<a class="mnav-sub" href="./#performance">Αποδόσεις</a>
+<a class="mnav-sub" href="./#strategies">Στρατηγικές</a>
+<a class="mnav-sub" href="./#portfolio">Χαρτοφυλάκιο</a>
+<a class="mnav-sub" href="./#funds">Κεφάλαια</a>
 <a class="mnav-link" href="../care/"><span style="color: #FF8A3D; white-space: nowrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg>Care 24/7</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="../#contact">Επικοινωνία<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-cta" href="../#booking">Κλείσε δωρεάν συνάντηση</a>
@@ -294,13 +313,12 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <main class="mf">
 
 
-<div class="mf-subnav"><div class="mf-subnav-in"><span class="mf-subnav-t">Accelerator Plus · Single Flex</span><nav class="links" id="navLinks">
+<div hidden style="display:none"><div><span></span><nav class="links" id="navLinks">
       <a href="#overview">Επισκόπηση</a>
       <a href="#performance">Αποδόσεις</a>
       <a href="#strategies">Στρατηγικές</a>
       <a href="#portfolio">Χαρτοφυλάκιο</a>
       <a href="#funds">Κεφάλαια</a>
-      <a href="#advisor">Σύμβουλος</a>
     </nav><button class="nav-toggle" id="navToggle" aria-hidden="true" tabindex="-1" style="display:none"></button></div></div>
 
 <!-- HERO -->
@@ -549,48 +567,6 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
     <div class="disc-text">Τα στοιχεία απόδοσης, ενεργητικού και μεγαλύτερων θέσεων προέρχονται από τα επίσημα Factsheet «Διαφημιστική Ανακοίνωση» της NN Hellas με ημερομηνία αναφοράς 30/9/2026, για τα εννέα (9) ΕΜΚ του προγράμματος Accelerator Plus (κωδικοί U37–U45). Εξαίρεση αποτελεί το NN Hellas Money Market (U45), για το οποίο χρησιμοποιούνται τα στοιχεία του πιο πρόσφατου διαθέσιμου Factsheet (30/6/2026). Τα στοιχεία γεωγραφικής/κλαδικής κατανομής των παγκόσμιων και ελληνικών μετοχών στην ενότητα «Πού πηγαίνουν τα χρήματά σας» είναι ενδεικτικά, βασισμένα σε δημόσια διαθέσιμα στοιχεία των υποκείμενων δεικτών/αμοιβαίων κεφαλαίων (Ιούλιος 2026) και μπορεί να διαφέρουν από την ακριβή σύνθεση κάθε ΕΜΚ σε δεδομένη χρονική στιγμή.</div>
   </div>
 </section>
-
-<!-- ADVISOR -->
-<section id="advisor">
-  <div class="wrap" style="max-width:820px;">
-    <div class="section-head left">
-      <div class="eyebrow">Ο σύμβουλός σας</div>
-      <h2>Πίσω από κάθε στρατηγική, ένας άνθρωπος</h2>
-    </div>
-    <div class="advisor-card">
-      <div class="adv-head">
-        <div class="adv-avatar"><img src="../assets/img/stefanos-papadakis.jpg" alt="Στέφανος Παπαδάκης"></div>
-        <div>
-          <div class="adv-name">Στέφανος Παπαδάκης, MSc</div>
-          <div class="adv-role">Financial Planner · Senior Insurance Agent</div>
-        </div>
-      </div>
-      <p class="adv-desc">Παροχή χρηματοασφαλιστικών υπηρεσιών σε ιδιώτες και επιχειρήσεις με γνώμονα τη μεθοδολογία του Financial Planning.</p>
-      <div class="adv-contact">
-        <div><div class="l">Τηλέφωνο</div><div class="v">697 3520 823</div></div>
-        <div><div class="l">Email</div><div class="v">Stefanos.Papadakis@nnadvisors.gr</div></div>
-        <div><div class="l">Διεύθυνση</div><div class="v">Κισσάμου 107, Χανιά</div></div>
-      </div>
-      <div class="adv-two">
-        <div class="adv-box">
-          <div class="t">Επαγγελματικές Πιστοποιήσεις</div>
-          <div class="row"><div class="dot"></div><div><div class="rn">Πιστοποιητικό Επιπέδου Α' Ασφαλιστικής Διαμεσολάβησης</div><div class="rs">Τράπεζα της Ελλάδος</div></div></div>
-          <div class="row"><div class="dot"></div><div><div class="rn">Πιστοποιητικό Επιπέδου Δ' Ασφαλιστικής Διαμεσολάβησης</div><div class="rs">Τράπεζα της Ελλάδος</div></div></div>
-          <div class="row"><div class="dot"></div><div><div class="rn">Αμοιβαία Κεφάλαια — Θεωρία &amp; Τεχνικές Πωλήσεις</div><div class="rs">Ε.Φ.Γ. Α.Ε.Δ.Α.Κ.</div></div></div>
-          <div class="row"><div class="dot"></div><div><div class="rn">Financial Planning</div><div class="rs">Achmea Academy</div></div></div>
-        </div>
-        <div class="adv-box">
-          <div class="t">Σπουδές</div>
-          <div class="row"><div class="dot"></div><div><div class="rn">MSc E-Commerce</div><div class="rs">University of Plymouth</div></div></div>
-          <div class="row"><div class="dot"></div><div><div class="rn">BSc Information Management Systems</div><div class="rs">University of Essex</div></div></div>
-          <div class="row"><div class="dot"></div><div><div class="rn">Mathematics &amp; Statistics</div><div class="rs">British Council</div></div></div>
-        </div>
-      </div>
-      <div class="adv-banner"><b>15+</b> Χρόνια Επαγγελματικής Εμπειρίας</div>
-    </div>
-  </div>
-</section>
-
 
 
 <section class="tight mf-note"><div class="wrap">NN Hellas · Accelerator Plus | Single Flex — Website δημιουργήθηκε βάσει του επίσημου ενημερωτικού σημειώματος προγράμματος (στοιχεία αναφοράς 30/9/2026, έκδοση 4/11/2026).</div></section>

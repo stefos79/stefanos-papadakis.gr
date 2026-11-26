@@ -87,6 +87,20 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 @media (max-width: 900px){.navlinks{display:none !important}.hero-h1{font-size:clamp(34px, 10.5vw, 52px) !important;letter-spacing:-1px !important}.sec-h2{font-size:clamp(28px, 8.4vw, 36px) !important}}
 </style>
 <style>html{scroll-behavior:smooth}section,footer{scroll-margin-top:80px}img{max-width:100%}</style>
+<style>
+.navdd{position:relative;display:inline-flex;align-items:center}
+.navdd > a.navlink{display:inline-flex;align-items:center;gap:5px}
+.navdd-caret{transition:transform .2s}
+.navdd:hover .navdd-caret,.navdd:focus-within .navdd-caret{transform:rotate(180deg)}
+.navdd-panel{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);min-width:220px;padding:10px;background:#16161A;border:1px solid #26262B;border-radius:14px;box-shadow:0 24px 40px rgba(0,0,0,.45);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .15s,transform .15s;z-index:20}
+.navdd-panel::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+.navdd:hover .navdd-panel,.navdd:focus-within .navdd-panel{opacity:1;visibility:visible;transform:translate(-50%,14px)}
+.navdd-panel a{color:#D6D6DA;text-decoration:none;font-size:14px;font-weight:500;padding:10px 12px;border-radius:8px;white-space:nowrap}
+.navdd-panel a:hover{background:#232328;color:#FF8A3D}
+.navdd-panel a.navdd-all{color:#FF8A3D;font-weight:600;border-bottom:1px solid #26262B;border-radius:8px 8px 0 0;margin-bottom:4px}
+.mnav-panel a.mnav-sub{min-height:40px;padding-left:16px;font-size:15px;color:#B4B4BA;border-bottom:1px solid #18181B;display:flex;align-items:center}
+.mnav-panel a.mnav-sub:hover{color:#FF8A3D}
+</style>
 </head>
 <body>
 <div style="width: 100%; font-family: 'Inter', system-ui, sans-serif; color: #FFFFFF; background: #0B0B0C">
@@ -106,7 +120,7 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="navlink" href="#individuals" style="color: #B4B4BA">Ιδιώτες</a>
 <a class="navlink" href="#about" style="color: #B4B4BA">Σχετικά</a>
 <a class="navlink" href="#reviews" style="color: #B4B4BA">Κριτικές</a>
-<a class="navlink" href="#funds" style="color: #B4B4BA">Αμοιβαία Κεφάλαια</a>
+<div class="navdd"><a class="navlink" href="funds/" style="color: #B4B4BA" aria-haspopup="true">Αμοιβαία Κεφάλαια<svg class="navdd-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="navdd-panel" role="menu"><a class="navdd-all" href="funds/">Αμοιβαία Κεφάλαια · Όλη η σελίδα</a><a href="funds/#overview">Επισκόπηση</a><a href="funds/#performance">Αποδόσεις</a><a href="funds/#strategies">Στρατηγικές</a><a href="funds/#portfolio">Χαρτοφυλάκιο</a><a href="funds/#funds">Κεφάλαια</a></div></div>
 <a class="navlink" href="care/" style="color: #FF8A3D; font-weight: 600; white-space: nowrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg>Care 24/7</a>
 <a class="navlink" href="#contact" style="color: #B4B4BA">Επικοινωνία</a>
 </nav>
@@ -120,7 +134,12 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="mnav-link" href="#individuals">Ιδιώτες<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#about">Σχετικά<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#reviews">Κριτικές<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mnav-link" href="#funds">Αμοιβαία Κεφάλαια<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="funds/">Αμοιβαία Κεφάλαια<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-sub" href="funds/#overview">Επισκόπηση</a>
+<a class="mnav-sub" href="funds/#performance">Αποδόσεις</a>
+<a class="mnav-sub" href="funds/#strategies">Στρατηγικές</a>
+<a class="mnav-sub" href="funds/#portfolio">Χαρτοφυλάκιο</a>
+<a class="mnav-sub" href="funds/#funds">Κεφάλαια</a>
 <a class="mnav-link" href="care/"><span style="color: #FF8A3D; white-space: nowrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg>Care 24/7</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#contact">Επικοινωνία<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-cta" href="#booking">Κλείσε δωρεάν συνάντηση</a>
