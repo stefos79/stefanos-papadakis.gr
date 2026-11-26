@@ -146,7 +146,7 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 </style>
 <style>
 .navdd{position:relative;display:inline-flex;align-items:center}
-.navdd > a.navlink{display:inline-flex;align-items:center;gap:5px}
+.navdd > a.navlink{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
 .navdd-caret{transition:transform .2s}
 .navdd:hover .navdd-caret,.navdd:focus-within .navdd-caret{transform:rotate(180deg)}
 .navdd-panel{position:absolute;top:100%;left:50%;transform:translate(-50%,8px);min-width:220px;padding:10px;background:#16161A;border:1px solid #26262B;border-radius:14px;box-shadow:0 24px 40px rgba(0,0,0,.45);display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .15s,transform .15s;z-index:20}
@@ -157,6 +157,16 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 .navdd-panel a.navdd-all{color:#FF8A3D;font-weight:600;border-bottom:1px solid #26262B;border-radius:8px 8px 0 0;margin-bottom:4px}
 .mnav-panel a.mnav-sub{min-height:40px;padding-left:16px;font-size:15px;color:#B4B4BA;border-bottom:1px solid #18181B;display:flex;align-items:center}
 .mnav-panel a.mnav-sub:hover{color:#FF8A3D}
+</style>
+<style>
+.navdd-panel.tools{min-width:290px}
+.navlinks{gap:22px !important}
+@media (max-width: 1280px){.navlinks{display:none !important}.mnav{display:block !important}}
+.navdd-panel a.tl{display:flex;align-items:center;gap:12px;padding:10px 12px;white-space:normal}
+.navdd-panel a.tl .ti{width:36px;height:36px;flex:0 0 36px;border-radius:10px;background:#232328;display:flex;align-items:center;justify-content:center}
+.navdd-panel a.tl b{display:block;color:#FFFFFF;font-size:14px;font-weight:600}
+.navdd-panel a.tl small{display:block;color:#8A8A90;font-size:12.5px;margin-top:2px}
+.navdd-panel a.tl:hover b{color:#FF8A3D}
 </style>
 </head>
 <body>
@@ -178,7 +188,7 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="navlink" href="../#about" style="color: #B4B4BA">About</a>
 <a class="navlink" href="../#reviews" style="color: #B4B4BA">Reviews</a>
 <div class="navdd"><a class="navlink" href="../funds/" style="color: #B4B4BA" aria-haspopup="true">Mutual Funds<svg class="navdd-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="navdd-panel" role="menu"><a href="../funds/#overview">Overview</a><a href="../funds/#performance">Returns</a><a href="../funds/#strategies">Strategies</a><a href="../funds/#portfolio">Portfolio</a><a href="../funds/#funds">Funds</a></div></div>
-<a class="navlink" href="../care/" style="color: #FF8A3D; font-weight: 600; white-space: nowrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg>Care 24/7</a>
+<div class="navdd navdd-tools"><a class="navlink" href="./" style="color: #FF8A3D; font-weight: 600; white-space: nowrap" aria-haspopup="true"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"></path></svg>Tools<svg class="navdd-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="navdd-panel tools" role="menu"><a class="tl" href="./"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.5s-7-4.2-7-10.5V5l7-2.5L19 5v6c0 6.3-7 10.5-7 10.5z"></path><path d="M9 12l2 2 4-4"></path></svg></span><span><b>Protection check-up</b><small>How protected are you?</small></span></a><a class="tl" href="../pension/"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2"></rect><path d="M8 7h8M8 12h2M14 12h2M8 16h2M14 16h2"></path></svg></span><span><b>Retirement calculator</b><small>How much will you be short?</small></span></a><a class="tl" href="../care/"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg></span><span><b>Care 24/7</b><small>A doctor in your pocket, free</small></span></a></div></div>
 <a class="navlink" href="../#contact" style="color: #B4B4BA">Contact</a>
 </nav>
 <div class="hdr-right" style="display: flex; align-items: center; gap: 10px; flex: 0 0 auto">
@@ -197,7 +207,10 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <a class="mnav-sub" href="../funds/#strategies">Strategies</a>
 <a class="mnav-sub" href="../funds/#portfolio">Portfolio</a>
 <a class="mnav-sub" href="../funds/#funds">Funds</a>
-<a class="mnav-link" href="../care/"><span style="color: #FF8A3D; white-space: nowrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><rect x="3" y="8" width="18" height="4" rx="1"></rect><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"></path></svg>Care 24/7</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="./"><span style="color: #FF8A3D; white-space: nowrap"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display: inline-block; vertical-align: -2px; margin-right: 6px"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"></path><path d="M19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"></path></svg>Tools</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-sub" href="./">Protection check-up</a>
+<a class="mnav-sub" href="../pension/">Retirement calculator</a>
+<a class="mnav-sub" href="../care/">Care 24/7</a>
 <a class="mnav-link" href="../#contact">Contact<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-cta" href="../#booking">Book a free meeting</a>
 </div>
