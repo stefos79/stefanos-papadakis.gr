@@ -88,6 +88,14 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 </style>
 <style>html{scroll-behavior:smooth}section,footer{scroll-margin-top:80px}img{max-width:100%}</style>
 <style>
+.svh-card{border-radius:28px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.svh-card .ph{height:230px;overflow:hidden}
+.svh-card .ph img{width:100%;height:100%;object-fit:cover;object-position:center 22%;filter:grayscale(1);transition:filter .4s,transform .6s}
+.svh-card:hover .ph img{filter:grayscale(0);transform:scale(1.04)}
+.svh-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.svh-chips span{font-size:13.5px;padding:7px 12px;border-radius:999px}
+</style>
+<style>
 .navdd{position:relative;display:inline-flex;align-items:center}
 .navdd > a.navlink{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
 .navdd-caret{transition:transform .2s}
@@ -127,8 +135,8 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 </span>
 </a>
 <nav class="navlinks" style="display: flex; align-items: center; gap: 28px; font-size: 14px; font-weight: 500">
-<a class="navlink" href="#business" style="color: #B4B4BA">Business</a>
-<a class="navlink" href="#individuals" style="color: #B4B4BA">Individuals</a>
+<a class="navlink" href="business/" style="color: #B4B4BA">Business</a>
+<a class="navlink" href="individuals/" style="color: #B4B4BA">Individuals</a>
 <a class="navlink" href="#about" style="color: #B4B4BA">About</a>
 <a class="navlink" href="#reviews" style="color: #B4B4BA">Reviews</a>
 <div class="navdd"><a class="navlink" href="funds/" style="color: #B4B4BA" aria-haspopup="true">Mutual Funds<svg class="navdd-caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></a><div class="navdd-panel tools" role="menu"><a class="tl" href="funds/#overview"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"></path></svg></span><span><b>Overview</b><small>The programme at a glance</small></span></a><a class="tl" href="funds/#performance"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 7h6v6"></path></svg></span><span><b>Returns</b><small>Cumulative & annual</small></span></a><a class="tl" href="funds/#strategies"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1.2" fill="currentColor"></circle></svg></span><span><b>Strategies</b><small>Which one fits your risk</small></span></a><a class="tl" href="funds/#portfolio"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"></path></svg></span><span><b>Portfolio</b><small>Countries, sectors, companies</small></span></a><a class="tl" href="funds/#funds"><span class="ti"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5 9-5z"></path><path d="M3 13l9 5 9-5"></path></svg></span><span><b>Funds</b><small>The 9 funds in detail</small></span></a></div></div>
@@ -141,8 +149,8 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <details class="mnav">
 <summary aria-label="Menu"><svg class="mnav-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg><svg class="mnav-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg></summary>
 <div class="mnav-panel">
-<a class="mnav-link" href="#business">Business<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
-<a class="mnav-link" href="#individuals">Individuals<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="business/">Business<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
+<a class="mnav-link" href="individuals/">Individuals<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#about">About<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="#reviews">Reviews<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
 <a class="mnav-link" href="funds/">Mutual Funds<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"></path></svg></a>
@@ -176,7 +184,7 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <div style="display: flex; flex-wrap: wrap; gap: 14px; padding-top: 4px">
 <a class="btn-o" href="#booking" style="background: #FF8A3D; color: #0B0B0C; font-weight: 600; font-size: 16px; padding: 16px 28px; border-radius: 999px; display: inline-flex; align-items: center; gap: 10px">Book a free meeting
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a>
-<a class="btn-g" href="#business" style="border: 1px solid #3A3A3F; color: #FFFFFF; font-weight: 500; font-size: 16px; padding: 16px 28px; border-radius: 999px; display: inline-flex; align-items: center">Explore services</a>
+<a class="btn-g" href="business/" style="border: 1px solid #3A3A3F; color: #FFFFFF; font-weight: 500; font-size: 16px; padding: 16px 28px; border-radius: 999px; display: inline-flex; align-items: center">Explore services</a>
 </div>
 </div>
 <div style="flex: 1 1 400px; min-width: 0; display: flex; justify-content: center">
@@ -277,151 +285,8 @@ p,blockquote,li,span,a,label{overflow-wrap:normal;word-break:normal}
 <div style="flex: 0 0 auto; position: relative; margin: 0 auto"><svg id="ckh-g" width="240" height="150" viewBox="0 0 220 140" aria-hidden="true" style="display: block; max-width: 100%; overflow: visible"><path d="M20 115 A90 90 0 0 1 200 115" fill="none" stroke="#26262B" stroke-width="18" stroke-linecap="round"></path><path id="ckh-arc" d="M20 115 A90 90 0 0 1 200 115" pathLength="100" fill="none" stroke="#FF8A3D" stroke-width="18" stroke-linecap="round" stroke-dasharray="72 100"></path><circle id="ckh-dot" cx="164" cy="47" r="13" fill="#FFFFFF" stroke="#0B0B0C" stroke-width="4"></circle><text id="ckh-num" x="110" y="108" text-anchor="middle" font-family="Commissioner, sans-serif" font-weight="900" font-size="46" fill="#FFFFFF">72</text><text x="110" y="134" text-anchor="middle" font-family="Inter, sans-serif" font-size="13" fill="#8A8A90">/100 score</text></svg><script>(function(){var arc=document.getElementById("ckh-arc"),dot=document.getElementById("ckh-dot"),num=document.getElementById("ckh-num");if(!arc)return;var V=[72,34,88,51,19,95,63],k=0,cur=72;function col(v){return v<40?"#D6453D":(v<70?"#FF8A3D":"#2E9E5B")}function set(v){var a=Math.PI*(1-v/100);arc.setAttribute("stroke-dasharray",Math.max(.01,v)+" 100");dot.setAttribute("cx",(110+90*Math.cos(a)).toFixed(1));dot.setAttribute("cy",(115-90*Math.sin(a)).toFixed(1));num.textContent=Math.round(v);arc.setAttribute("stroke",col(v))}function go(to){var from=cur,t0=null,d=1400;function f(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/d),e=p<.5?4*p*p*p:1-Math.pow(-2*p+2,3)/2;cur=from+(to-from)*e;set(cur);if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f)}set(cur);if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches)return;var vis=true;if("IntersectionObserver" in window){new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(arc)}setInterval(function(){if(!vis||document.hidden)return;k=(k+1)%V.length;go(V[k])},2600)})();</script></div>
 </div>
 </section>
-<!-- BUSINESS -->
-<section id="business" style="background: #F3F3F1; color: #0B0B0C">
-<div style="max-width: 1240px; margin: 0 auto; padding: 112px 24px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
-<span style="font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: #B85A12">Services for businesses</span>
-<h2 class="sec-h2" style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 48px; line-height: 1.08; letter-spacing: -1px">Your business, shielded against the unexpected.</h2>
-</div>
-<p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #55555A">A business isn’t only at risk from a fire or a theft. It is also at risk when it loses a key person, when a partner leaves or when a third-party claim arrives without warning. Identifying and analysing insurable risks is now essential for smooth operations and a stable future.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 20px">
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-keyperson.jpg" alt="Business executive" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">01</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Key Person insurance</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">Every business has people whose absence would bring it to a halt. Key Person insurance provides immediate liquidity if a key person dies or becomes unable to work, so the business can bridge the gap, find a replacement and carry on without being shaken.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-partners.jpg" alt="Partners shaking hands" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">02</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Partner buy-sell agreements</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">What happens to a partner’s share if they leave unexpectedly? With the right cover, the funding for the buy-out is secured in advance, at a price that is fair to everyone. The remaining partners keep control of the company and the heirs receive the value that is due to them.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-tax.jpg" alt="Tax calculations" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">03</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Tax-efficient planning</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">The current tax framework offers incentives for certain corporate benefits and programmes. Working with your accountant, we identify the financial tools that make use of them, so protecting your business and its people also works as a tax advantage.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-credit.jpg" alt="Signing documents" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">04</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Business debt protection</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">Loans and obligations don’t stop if something happens to the owner or a key person. The right cover protects creditors and provides immediate liquidity, so the family and the business aren’t burdened with debt at the worst possible moment.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-continuity.jpg" alt="Family in an open field" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">05</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Business continuity &amp; succession</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">A business built with hard work shouldn’t end when its founder steps away. We plan the handover to the next generation or new owners in good time, with the necessary liquidity and clear rules, so the change happens smoothly.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-group.jpg" alt="Office team" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">06</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Group health insurance for staff</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">Good people stay where they feel cared for. A group health or pension plan gives your staff benefits beyond the public system. It builds loyalty, helps you attract talent and is often more efficient than an equivalent pay rise.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-liability.jpg" alt="Workers in safety vests" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">07</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Business liability</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">An accident on your premises, a faulty product or a mistake in your services can lead to claims beyond what the business can absorb. We cover your liability towards third parties and employees, according to the nature of your work.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-property.jpg" alt="Company warehouse" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">08</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Company property &amp; fleet</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">Buildings, stock, equipment and vehicles are the capital that keeps the business standing. Every year we review the market to find the best balance of cover and cost, with special rates for businesses and vehicle fleets.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #FFFFFF; border: 1px solid #E2E2DF; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 16 / 9; overflow: hidden; background: #0B0B0C"><img loading="lazy" src="../assets/img/service-cyber.jpg" alt="Laptop keyboard" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px">
-<span style="font-size: 12px; font-weight: 600; color: #8A8A8F; letter-spacing: 1px">09</span>
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Cyber risk &amp; GDPR</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #55555A">A cyber attack or a data breach can halt your operations, bring fines and damage your reputation. Cyber insurance covers the loss, the cost of recovery and third-party claims, in a world that moves digitally and fast.</p>
-</div>
-</article>
-
-</div>
-</div>
-</section>
-
-<!-- INDIVIDUALS -->
-<section id="individuals" style="background: #0B0B0C; color: #FFFFFF">
-<div style="max-width: 1240px; margin: 0 auto; padding: 112px 24px; display: flex; flex-direction: column; gap: 56px">
-<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px">
-<div style="display: flex; flex-direction: column; gap: 16px; max-width: 680px">
-<span style="font-size: 13px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: #FF8A3D">Services for individuals</span>
-<h2 class="sec-h2" style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: 48px; line-height: 1.08; letter-spacing: -1px">What matters most: your people.</h2>
-</div>
-<p style="margin: 0; max-width: 420px; font-size: 17px; line-height: 1.6; color: #B4B4BA">Solutions that give your family a solid foundation today, in retirement and for your children’s education. Because financial security isn’t a luxury. It is the peace of mind of knowing that, whatever happens, your loved ones will be fine.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 20px">
-
-<article class="svc" style="background: #141416; border: 1px solid #26262A; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 4 / 3; overflow: hidden; background: #1A1A1D"><img loading="lazy" src="../assets/img/service-family.jpg" alt="Parents with three children in a flowering meadow" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; display: block"></div>
-<div style="padding: 26px 26px 30px; display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Family &amp; life</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B4B4BA">If your income stopped tomorrow, how long could your family keep living the same way? Life insurance ensures your loved ones have financial support to carry on with their lives, pay off the mortgage and complete their plans.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #141416; border: 1px solid #26262A; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 4 / 3; overflow: hidden; background: #1A1A1D"><img loading="lazy" src="../assets/img/service-health.jpg" alt="Doctor with a patient" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 26px 30px; display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Private health insurance</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B4B4BA">When it comes to health, speed and choice matter. A health plan gives you access to private hospitals and doctors of your choice, and protects your savings from a major medical expense. We design it together, based on your age, needs and budget.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #141416; border: 1px solid #26262A; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 4 / 3; overflow: hidden; background: #1A1A1D"><img loading="lazy" src="../assets/img/service-pension.jpg" alt="Retired couple" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 26px 30px; display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Private pension</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B4B4BA">The state pension is rarely enough to maintain your standard of living. A private pension plan gradually builds extra income for the years after work. The earlier you start, the smaller the monthly effort and the bigger the result.</p>
-</div>
-</article>
-
-<article class="svc" style="background: #141416; border: 1px solid #26262A; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<div style="aspect-ratio: 4 / 3; overflow: hidden; background: #1A1A1D"><img loading="lazy" src="../assets/img/service-education.jpg" alt="Students studying together" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%; display: block"></div>
-<div style="padding: 26px 26px 30px; display: flex; flex-direction: column; gap: 10px">
-<h3 style="margin: 0; font-family: 'Commissioner', sans-serif; font-weight: 700; font-size: 21px">Education fund</h3>
-<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #B4B4BA">A child’s education, in Greece or abroad, is perhaps a family’s most important investment. A savings plan builds the necessary capital step by step. And if something happens to a parent, the studies continue uninterrupted, whatever happens.</p>
-</div>
-</article>
-
-</div>
-</div>
-</section>
-
+<!-- SERVICES HOOKS -->
+<section id="services" style="background: #FFFFFF; padding: clamp(56px, 8vw, 96px) clamp(16px, 3vw, 30px)"><div style="max-width: 1240px; margin: 0 auto"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #B85A12">Services</div><h2 class="sec-h2" style="margin: 14px 0 0; max-width: 820px; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: clamp(30px, 4.4vw, 48px); line-height: 1.08; letter-spacing: -1.2px; color: #0B0B0C">Solutions for every chapter of your life <span style="color: #E0701F">and your business.</span></h2><div style="margin-top: 36px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr)); gap: 24px"><a id="business" href="business/" class="svh-card" style="background: #0B0B0C; color: #FFFFFF; text-decoration: none; scroll-margin-top: 90px"><div class="ph"><img src="../assets/img/service-keyperson.jpg" alt="" loading="lazy"></div><div style="padding: clamp(24px, 4vw, 36px); display: flex; flex-direction: column; flex: 1"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FF8A3D">For businesses</div><h3 style="margin: 12px 0 0; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 32px); line-height: 1.12; letter-spacing: -0.6px">Your business, shielded against the unexpected.</h3><div class="svh-chips"><span style="background: #1C1C20; color: #D6D6DA">Key Person insurance</span><span style="background: #1C1C20; color: #D6D6DA">Partner buy-sell agreements</span><span style="background: #1C1C20; color: #D6D6DA">Tax-efficient planning</span><span style="background: #1C1C20; color: #D6D6DA">Business debt protection</span><span style="background: #1C1C20; color: #D6D6DA">Business continuity &amp; succession</span><span style="background: #1C1C20; color: #D6D6DA">Group health insurance for staff</span><span style="background: #1C1C20; color: #D6D6DA">Business liability</span><span style="background: #1C1C20; color: #D6D6DA">Company property &amp; fleet</span><span style="background: #1C1C20; color: #D6D6DA">Cyber risk &amp; GDPR</span></div><span style="margin-top: 26px; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #FF8A3D; color: #0B0B0C; font-weight: 800; font-size: 16px; padding: 15px 26px; border-radius: 999px">See all 9 solutions <span aria-hidden="true">→</span></span></div></a><a id="individuals" href="individuals/" class="svh-card" style="background: #F3F3F1; color: #0B0B0C; text-decoration: none; scroll-margin-top: 90px"><div class="ph"><img src="../assets/img/service-family.jpg" alt="" loading="lazy"></div><div style="padding: clamp(24px, 4vw, 36px); display: flex; flex-direction: column; flex: 1"><div style="font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #B85A12">For individuals</div><h3 style="margin: 12px 0 0; font-family: 'Commissioner', sans-serif; font-weight: 800; font-size: clamp(24px, 3vw, 32px); line-height: 1.12; letter-spacing: -0.6px">What matters most: your people.</h3><div class="svh-chips"><span style="background: #FFFFFF; color: #3A3A3F">Family &amp; life</span><span style="background: #FFFFFF; color: #3A3A3F">Private health insurance</span><span style="background: #FFFFFF; color: #3A3A3F">Private pension</span><span style="background: #FFFFFF; color: #3A3A3F">Education fund</span></div><span style="margin-top: 26px; align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; background: #0B0B0C; color: #FFFFFF; font-weight: 800; font-size: 16px; padding: 15px 26px; border-radius: 999px">See all 4 solutions <span aria-hidden="true">→</span></span></div></a></div></div></section>
 <!-- PENSION HOOK -->
 <section id="pension-hook" style="background: #F3F3F1; padding: clamp(48px, 7vw, 70px) clamp(16px, 3vw, 30px)">
 <div style="max-width: 1180px; margin: 0 auto; background: #0B0B0C; color: #FFFFFF; border-radius: 28px; padding: clamp(28px, 5vw, 52px); position: relative; overflow: hidden; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 30px 50px">
@@ -915,8 +780,8 @@ requestAnimationFrame(function g(t){if(!t0)t0=t;var q=Math.min(1,(t-t0)/1200),e=
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px">
 <span style="font-size: 12px; font-weight: 600; letter-spacing: 1.4px; text-transform: uppercase; color: #FF8A3D">Services</span>
-<a href="#business" style="color: #D6D6DA">For businesses</a>
-<a href="#individuals" style="color: #D6D6DA">For individuals</a>
+<a href="business/" style="color: #D6D6DA">For businesses</a>
+<a href="individuals/" style="color: #D6D6DA">For individuals</a>
 <a href="#funds" style="color: #D6D6DA">Mutual funds</a>
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px; font-size: 15px">
